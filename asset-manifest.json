@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wordle.ethanshealey.com/static/css/main.07b21edc.css",
+    "main.js": "/wordle.ethanshealey.com/static/js/main.bc615ddc.js",
+    "index.html": "/wordle.ethanshealey.com/index.html",
+    "main.07b21edc.css.map": "/wordle.ethanshealey.com/static/css/main.07b21edc.css.map",
+    "main.bc615ddc.js.map": "/wordle.ethanshealey.com/static/js/main.bc615ddc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07b21edc.css",
+    "static/js/main.bc615ddc.js"
+  ]
+}
