@@ -1,6 +1,6 @@
 {
   "name": "wordle",
-  "homepage": "wordle.ethanshealey.com",
+  "homepage": "https://wordle.ethanshealey.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
