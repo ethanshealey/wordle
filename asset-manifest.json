@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/wordle.ethanshealey.com/static/css/main.07b21edc.css",
-    "main.js": "/wordle.ethanshealey.com/static/js/main.e94c701a.js",
-    "index.html": "/wordle.ethanshealey.com/index.html",
-    "main.07b21edc.css.map": "/wordle.ethanshealey.com/static/css/main.07b21edc.css.map",
-    "main.e94c701a.js.map": "/wordle.ethanshealey.com/static/js/main.e94c701a.js.map"
+    "main.css": "/static/css/main.07b21edc.css",
+    "main.js": "/static/js/main.e94c701a.js",
+    "index.html": "/index.html",
+    "main.07b21edc.css.map": "/static/css/main.07b21edc.css.map",
+    "main.e94c701a.js.map": "/static/js/main.e94c701a.js.map"
   },
   "entrypoints": [
     "static/css/main.07b21edc.css",
