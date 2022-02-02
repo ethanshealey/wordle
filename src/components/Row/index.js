@@ -24,10 +24,16 @@ const Row = (props) => {
             }
         }
         else if(e.key === "Enter") {
+            
             if(!values.includes('')) {
-                if(props.index !== 5) props.setRow(r => r+1)
-                setIsDisabled(true)
-                props.handleAnswer(values)
+                if(!props.validWord(values.join(''))) {
+                    alert('Word not in word list')
+                }
+                else {
+                    if(props.index !== 5) props.setRow(r => r+1)
+                    setIsDisabled(true)
+                    props.handleAnswer(values)
+                }
             }
         }
         else if(e.keyCode >= 65 && e.keyCode <= 90 && values[index] === '') {

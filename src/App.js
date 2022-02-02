@@ -20,6 +20,10 @@ function App() {
     setIsLoading(false)
   }, [])
 
+  const validWord = (w) => {
+    return allWords.includes(w.toLowerCase())
+  }
+
   const stopClick = () => {
     setTimeout(() => document.getElementById(currentBlock).focus(), 20)
   }
@@ -46,6 +50,9 @@ function App() {
       alert('you won!')
       const inputs = [].slice.call(document.getElementsByTagName('input')).forEach(ele => ele.disabled = true)
     } 
+    if(document.getElementById('54').value !== "") {
+      alert(`Game over! The word was ${word}`)
+    }
   }
 
   return (
@@ -68,6 +75,7 @@ function App() {
                   setRow={setRow}
                   setCurrentBlock={setCurrentBlock}
                   handleAnswer={handleAnswer}
+                  validWord={validWord}
                 />
               )})
             }
