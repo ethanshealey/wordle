@@ -16,7 +16,6 @@ const Row = (props) => {
 
     const handleInput = (e, index) => {
         if(e.key === "Backspace") { 
-            //setValues(v => v.map((ele, ind) => { return ind === index ? '' : ele }))
             props.updateValues('', props.index, index)
             if(index !== 0 && props.values[index] === '') {
                 document.getElementById(`${props.index}${index-1}`).focus()
@@ -38,7 +37,6 @@ const Row = (props) => {
             }
         }
         else if(e.keyCode >= 65 && e.keyCode <= 90 && props.values[index] === '') {
-            //setValues(v => v.map((ele, ind) => { return ind === index ? e.key.toUpperCase() : ele }))
             props.updateValues(e.key.toUpperCase(), props.index, index)
             index !== 4 && document.getElementById(`${props.index}${index+1}`).focus()
             if(index !== 4) props.setCurrentBlock(`${props.index}${index+1}`)

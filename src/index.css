@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -60,7 +61,7 @@ body {
   border: 2.5px solid #565758;
 }
 .wordle-wrapper {
-  width: 245px;
+  min-width: 245px;
   text-align: center;
   margin-top: -200px;
 }

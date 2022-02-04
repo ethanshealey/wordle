@@ -90,7 +90,6 @@ function App() {
       if(currentBlock[1] != 0 && values[currentBlock[0]][currentBlock[1]] === '') {
         updateValues('', currentBlock[0], parseInt(currentBlock[1])-1)
         setCurrentBlock(`${currentBlock[0]}${parseInt(currentBlock[1])-1}`)
-
       }
     }
     else if(key.key === 'ENTER') {
