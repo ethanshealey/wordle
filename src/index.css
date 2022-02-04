@@ -61,6 +61,7 @@ body {
   border: 2.5px solid #565758;
 }
 .wordle-wrapper {
+  width: 19%;
   min-width: 245px;
   text-align: center;
   margin-top: -200px;
@@ -125,4 +126,10 @@ body {
 
 .used {
   cursor: not-allowed;
+}
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  .wordle-wrapper {
+    width: 39% !important;
+  }
 }

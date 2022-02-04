@@ -66,7 +66,7 @@ function App() {
       alert('you won!')
       const inputs = [].slice.call(document.getElementsByTagName('input')).forEach(ele => ele.disabled = true)
     } 
-    if(document.getElementById('54').value !== "") {
+    else if(document.getElementById('54').value !== "") {
       alert(`Game over! The word was ${word}`)
     }
   }
