@@ -3,7 +3,7 @@ import Keyboard from './components/Keyboard';
 import Row from './components/Row';
 import answerList from './words/answer-list.json'
 import wordList from './words/word-list.json'
-
+import { AiOutlineReload } from 'react-icons/ai'
 function App() {
 
   const [ word, setWord ] = useState('')
@@ -102,6 +102,7 @@ function App() {
         setCurrentBox(_ => `box-${currentRow+1}-0`)
         if(guess.join('') === word.toUpperCase()) {
           alert("You won!")
+          document.getElementById('play-again')!.style.visibility = "visible"
           setCurrentRow(cr => -1)
         }
         else {
@@ -129,6 +130,7 @@ function App() {
         <h1>WORDLE</h1>
         <div id="board">
           { Array(6).fill(1).map((_, i) => <Row key={i} row={i} currentRow={currentRow} guess={guess} guesses={guesses} handleInput={handleInput} />) }
+          <button id="play-again" onClick={() => window.location.reload()}>Play Again <AiOutlineReload id="play-again-icon" /></button>
         </div>
         <Keyboard simulateKeyPress={simulateKeyPress} />
       </div>

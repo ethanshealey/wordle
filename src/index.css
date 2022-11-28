@@ -105,3 +105,20 @@ input:focus {
     padding: 10px !important;
   }
 }
+
+#play-again {
+  visibility: hidden;
+  cursor: pointer;
+  border: none;
+  background-color: #232324;
+  margin: 2.5px;
+  padding: 10px;
+  color: rgba(255,255,255,.5);
+  cursor: pointer;
+  font-family: 'Staatliches';
+  border-radius: 5%;
+  font-size: 21px;
+}
+#play-again-icon {
+  margin-bottom: -3px;
+}
