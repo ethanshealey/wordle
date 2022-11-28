@@ -35,19 +35,6 @@ function App() {
 
   const handleGuessColors = (): void => {
 
-    /*
-
-    word = "WOULD"
-    guess= "BOWEL"
-
-    does WOULD contain B? No: Gray
-    does WOULD contain O? Yes: where? [1] and [1] - remove from WOULD: Green
-    does W ULD contain W? Yes: Where? [0] and [2] - remove from W ULD: Yellow
-    does   ULD contain E? No: Gray
-    does   ULD contain L? No: Gray
-
-    */
-
     let ans = word.toUpperCase().split('')
     let g = [ ...guess ]
 
@@ -73,73 +60,12 @@ function App() {
       }
       else {
         // set box
-        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#232324"
         // set key
-        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"    
+        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#232324"    
       }
     })
     
-
-    // g.forEach((ch, i) => {
-    //   if(ans.includes(ch)) { // answer contains char
-    //     if(ans[i] === ch) { // green
-    //       document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = "#538d4e"
-    //       document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = "#538d4e"
-    //       // set key
-    //       document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = "#538d4e"
-    //     }
-    //     else { // yellow
-    //        // set box
-    //       document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-    //       document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-    //       // set key
-    //       document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-    //     }
-    //     ans[i] = ''
-    //   }
-    //   else { // answer doesnt contain char
-    //     // set box
-    //     document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = "#3a3a3c"
-    //     // set key
-    //     document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = "#3a3a3c"    
-    //   }
-    // })
-
-    // @TODO: Redo this function
-    // let tempWord = word.toUpperCase().split('')
-    
-    // console.log(tempWord, guess)
-    // for(let i = 0; i < 5; i++) {
-    //   if(tempWord[i] === guess[i]) {
-    //     console.log(`${guess[i]} is a match!`)
-    //     // set box
-    //     document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = "#538d4e"
-    //     document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = "#538d4e"
-    //     // set key
-    //     document.getElementById(`key-${guess[i]}`)!.style.borderColor = "#538d4e"
-    //     document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = "#538d4e"
-    //     tempWord[i] = ''
-    //   }
-    //   else if(tempWord.includes(guess[i])) {
-    //     console.log(`${guess[i]} is somewhere!`)
-    //      // set box
-    //     document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-    //     document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-    //     // set key
-    //     document.getElementById(`key-${guess[i]}`)!.style.borderColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-    //     document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-    //     tempWord[i] = ''
-    //   }
-    //   else {
-    //     console.log(`${guess[i]} is a no go!`)
-    //     // set box
-    //     document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"
-    //     // set key
-    //     document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"    
-    //     tempWord[i] = ''
-    //   }
-      
-    // }
   }
 
   const handleInput = (e: KeyboardEvent, pos: number): void => {

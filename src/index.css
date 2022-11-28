@@ -76,7 +76,7 @@ input:focus {
 }
 
 [id^="key-"] {
-  background-color: #232324;
+  background-color: #3a3a3c;
   margin: 2.5px;
   padding: 15px;
   color: rgba(255,255,255,.5);
