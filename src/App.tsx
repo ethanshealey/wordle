@@ -60,9 +60,9 @@ function App() {
       }
       else {
         // set box
-        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#232324"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"
         // set key
-        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#232324"    
+        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#121213"  
       }
     })
     

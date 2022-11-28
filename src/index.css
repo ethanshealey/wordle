@@ -2,7 +2,9 @@
 
 body {
   background-color: #121213;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 #main {
@@ -14,6 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
   height: 100vh;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -29,11 +32,10 @@ h1 {
   font-size: 35px;
   color: #d7dadc;
   border-bottom: thin solid #3a3a3c;
-  width: 100vw;
-  margin-left: -15px;
+  width: 120vw;
   text-align: center;
-  margin-top: -2.5px;
-  padding-bottom: 2.5px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 #board {
@@ -76,7 +78,7 @@ input:focus {
 }
 
 [id^="key-"] {
-  background-color: #3a3a3c;
+  background-color: #232324;
   margin: 2.5px;
   padding: 15px;
   color: rgba(255,255,255,.5);
@@ -95,4 +97,11 @@ input:focus {
 #keyboard {
   margin-bottom: 5%;
   z-index: 999;
+  min-width: 90vw;
+}
+
+@media screen and (max-width: 600px) {
+  [id^="key-"] {
+    padding: 10px !important;
+  }
 }
