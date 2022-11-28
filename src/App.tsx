@@ -23,7 +23,6 @@ function App() {
    }, [currentRow])
 
   const stopClick = () => {
-    console.log(currentBox)
     setTimeout(() => document.getElementById(currentBox)?.focus(), 20)
   }
 
