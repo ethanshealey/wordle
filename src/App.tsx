@@ -49,18 +49,17 @@ function App() {
         ans[i] = ''
       }
     })
-    console.log(ans, g)
     g.forEach((ch, i) => {
       if(ans.includes(ch)) {
-        document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = document.getElementById(`key-${guess[i]}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
         // set key
         document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
         ans[i] = ''
       }
       else {
         // set box
-        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"
         // set key
         document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#121213"  
       }
@@ -117,7 +116,6 @@ function App() {
   }
 
   const simulateKeyPress = (char: string): boolean | void => {
-    console.log(document.getElementById(`key-${char}`)!.innerHTML, document.getElementById(`key-${char}`)!.style.backgroundColor)
     if(document.getElementById(`key-${char}`)!.style.backgroundColor === "rgb(58, 58, 60)") return false
     const e = new KeyboardEvent('keydown', {
       'key': char === "BACK" ? "BACKSPACE" : char
@@ -127,7 +125,7 @@ function App() {
 
   return (
       <div id="main" onClick={() => stopClick()}>
-        <h1>WORDLE</h1>
+        <h1>WORDLE | {word}</h1>
         <div id="board">
           { Array(6).fill(1).map((_, i) => <Row key={i} row={i} currentRow={currentRow} guess={guess} guesses={guesses} handleInput={handleInput} />) }
           <button id="play-again" onClick={() => window.location.reload()}>Play Again <AiOutlineReload id="play-again-icon" /></button>
