@@ -38,8 +38,6 @@ function App() {
     let ans = word.toUpperCase().split('')
     let g = [ ...guess ]
 
-    console.log(ans, g)
-
     g.forEach((ch, i) => {
       if(ans[i] === ch) {
         document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = "#538d4e"
@@ -125,7 +123,7 @@ function App() {
 
   return (
       <div id="main" onClick={() => stopClick()}>
-        <h1>WORDLE | {word}</h1>
+        <h1>WORDLE</h1>
         <div id="board">
           { Array(6).fill(1).map((_, i) => <Row key={i} row={i} currentRow={currentRow} guess={guess} guesses={guesses} handleInput={handleInput} />) }
           <button id="play-again" onClick={() => window.location.reload()}>Play Again <AiOutlineReload id="play-again-icon" /></button>
