@@ -102,6 +102,10 @@ function App() {
           document.getElementById('play-again')!.style.visibility = "visible"
           setCurrentRow(cr => -1)
         }
+        else if(currentRow + 1 > 6) {
+          alert(`Sorry, you lost! The word was: ${word}`)
+          document.getElementById('play-again')!.style.visibility = "visible"
+        }
         else {
           setCurrentRow(cr => cr + 1)
           setGuess(_ => ['', '', '', '', ''])
