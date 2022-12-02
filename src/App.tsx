@@ -102,8 +102,8 @@ function App() {
           document.getElementById('play-again')!.style.visibility = "visible"
           setCurrentRow(cr => -1)
         }
-        else if(currentRow + 1 > 6) {
-          alert(`Sorry, you lost! The word was: ${word}`)
+        else if(currentRow + 1 > 5) {
+          alert(`Sorry, you lost! The word was: ${word.toUpperCase()}`)
           document.getElementById('play-again')!.style.visibility = "visible"
         }
         else {
