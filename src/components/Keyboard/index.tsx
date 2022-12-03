@@ -14,7 +14,7 @@ const Keyboard = ({ simulateKeyPress }: { simulateKeyPress: any }) => {
       { 
         keys.map((row) => 
           (
-            <div className="keyboard-row">
+            <div key={`row-${row}`} className="keyboard-row">
               {
                 row.map((key) => (
                   <Key key={`key-${key}`} char={key} simulateKeyPress={simulateKeyPress} />

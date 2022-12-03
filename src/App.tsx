@@ -53,7 +53,7 @@ function App() {
         document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
         // set key
         document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-        ans[i] = ''
+        ans[ans.indexOf(ch)] = ''
       }
       else {
         // set box
