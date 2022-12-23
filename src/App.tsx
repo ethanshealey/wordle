@@ -4,6 +4,14 @@ import Row from './components/Row';
 import answerList from './words/answer-list.json'
 import wordList from './words/word-list.json'
 import { AiOutlineReload } from 'react-icons/ai'
+
+const colors = {
+  'GREEN': 'rgb(83, 141, 78)',
+  'YELLOW': '#b59f3b',
+  'BLACK_BOX': '#3a3a3c',
+  'BLACK_KEY': '#121213'
+}
+
 function App() {
 
   const [ word, setWord ] = useState('')
@@ -40,26 +48,26 @@ function App() {
 
     g.forEach((ch, i) => {
       if(ans[i] === ch) {
-        document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = "#538d4e"
-        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = "#538d4e"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = colors.GREEN
+        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = colors.GREEN
         // set key
-        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = "#538d4e"
+        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = colors.GREEN
         ans[i] = ''
       }
     })
     g.forEach((ch, i) => {
       if(ans.includes(ch)) {
-        document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
-        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor = document.getElementById(`box-${currentRow}-${i}`)!.style.borderColor === colors.GREEN ? colors.GREEN : colors.YELLOW
+        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor === colors.GREEN ? colors.GREEN : colors.YELLOW
         // set key
-        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#b59f3b"
+        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === colors.GREEN ? colors.GREEN : colors.YELLOW
         ans[ans.indexOf(ch)] = ''
       }
       else {
         // set box
-        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#3a3a3c"
+        document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor = document.getElementById(`box-${currentRow}-${i}`)!.style.backgroundColor === colors.GREEN ? colors.GREEN : colors.BLACK_BOX
         // set key
-        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === "rgb(83, 141, 78)" ? "rgb(83, 141, 78)" : "#121213"  
+        document.getElementById(`key-${guess[i]}`)!.style.backgroundColor = document.getElementById(`key-${guess[i]}`)!.style.backgroundColor === colors.GREEN ? colors.GREEN : colors.BLACK_KEY 
       }
     })
     
